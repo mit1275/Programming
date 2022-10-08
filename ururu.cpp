@@ -1,0 +1,54 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	 #ifndef ONLINE_JUDGE
+ freopen("input.txt", "r", stdin);
+ freopen("output.txt", "w", stdout);
+ #endif
+	int t;
+	cin>>t;
+	while(t--)
+	{
+		int n;
+		cin>>n;
+		vector<int> v(n);
+		vector<int> diff;
+		for(int i=0;i<n;i++)
+		{
+			cin>>v[i];
+		}
+		for(int i=0;i<n-1;i++)
+		{
+			diff.push_back(v[i+1]-v[i]);
+		}
+		int mini = 250;
+		int maxi = 0;
+		int curr_len = 0;
+		bool is_seq = false;
+		for(int i=0;i<diff.size();i++)
+		{
+			if(diff[i]<=2)
+			{
+				if(is_seq==false)
+					curr_len++;
+				else
+				{
+					is_seq=true;
+					curr_len++;
+				}
+			}
+			else
+			{
+				is_seq=false;
+				mini=min(mini, curr_len);
+				maxi=max(maxi, curr_len);
+				curr_len = 0;
+			}
+		}
+		mini=min(mini, curr_len);
+		maxi=max(maxi, curr_len);
+		cout<<mini+1<<" "<<maxi+1<<endl;
+	}
+}

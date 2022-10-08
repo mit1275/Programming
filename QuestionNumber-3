@@ -1,0 +1,50 @@
+                                     /*Knowing is not enough,we must apply!!*/
+ #include<bits/stdc++.h>
+ using namespace std;                          
+ #define ll long long int
+ #define MOD 1000000007
+ #define boost ios_base::sync_with_stdio(false);cin.tie(NULL);
+ // ll dp[1]
+ ll findmaxsum(ll a[],ll n,ll i,ll dp[])
+ {
+ 	if(i>=n)
+ 	{
+ 		// if index goes out of bound just return 0
+ 		return 0;
+ 	}
+ 	if(dp[i]!=-1)
+ 	{
+ 		return dp[i];
+ 	}
+
+ 	// now here we have two choices 
+ 	// choice 1 is if we include this element then we need to move our index i by 2 steps ahead
+ 	// choice 2 is if we exclude this element
+
+ 	// maximum of choice 1 and 2 we will be our answer
+
+ 	return dp[i]=max(findmaxsum(a,n,i+2,dp)+a[i],findmaxsum(a,n,i+1,dp));
+ }           
+ int main(){
+  boost
+ ll n;
+ cin>>n;
+ ll dp[n+1];
+ ll a[n];
+
+ for(ll i=0;i<n;i++)
+ {
+ 	cin>>a[i];
+ }
+
+// fill dp table with -1 values initially
+ memset(dp,-1,sizeof(dp));
+
+ // can be solved using dynamic programming in O(n) time and O(n) space
+
+cout<<findmaxsum(a,n,0,dp);
+
+
+
+   
+}

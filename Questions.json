@@ -1,0 +1,48 @@
+{
+	"Questions":
+	{
+		"1":
+		{
+			"question":"How many data does a long long int use in 64 bit ?",
+			  "answer":"8 bytes"
+		},
+		"2":
+		{
+			"question":"Name any dynamic data structure?",
+			  "answer":"Vector"
+			 
+
+		},
+		"3":
+		{
+			"question":"How much data does char uses ?",
+			  "answer":"1 byte"
+			  
+		},
+		"4":
+		{
+			"question":"Which data structure is used in map and set?",
+			  "answer1":"Tree"
+		},
+		"5":
+		{
+			"question":"Which data structure uses O(1) for search?",
+			  "answer":"Set"
+		},
+		"6":
+		    {
+		    "question":"Which language is used to to study machine learning ?",
+		    "answer":"Python"
+		    },
+		 "7":
+		 {
+		 	"question":"Which language is prefferd by competitive programmers for coding?",
+		 	"answer":"C++"
+		 },
+		"8":
+		{
+			"question":"Best case time complexity of quick sort ?",
+			"answer":"O(nlogn)"
+		}
+	}
+}
